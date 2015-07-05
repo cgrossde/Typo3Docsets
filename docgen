@@ -1,0 +1,47 @@
+#!/usr/bin/env node
+var config = require('./config.json');
+var commanderTabTab = require('commander-tabtab');
+var program = require('commander');
+var generator = require('./generator');
+program._name = './docgen';
+program.version(config.version)
+
+program.option('-s, --specific [version]', 'Only generate docset for specific version')
+
+program
+  .command('cms')
+  .description('Generate docset for Typo3 CMS')
+  .action(function() {
+    generator.gen(config.cms, program.specific);
+  });
+
+program
+  .command('flow')
+  .description('Generate docset for Typo3 FLOW')
+  .action(function() {
+    generator.gen(config.flow, program.specific);
+  });
+
+
+
+
+// Display info on how to enable tabcompletion
+program.on('--help', function(){
+  console.log('  Tab-Completion:');
+  console.log('');
+  console.log('    To enable tab completion execute: source <(./docgen completion)');
+  console.log('    For permanent tab completion add the output of "./docgen completion"');
+  console.log('    to your .bashrc/.zshrc: ./docgen completion >> ~/.zshrc');
+  console.log('');
+});
+
+
+// Show help if invoked without cli options/command
+if (!process.argv.slice(2).length) {
+  program.outputHelp();
+}
+
+// Tab completion
+commanderTabTab.init(program, './docgen');
+// Go parse
+program.parse(process.argv);

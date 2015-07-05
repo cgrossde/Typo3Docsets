@@ -1,0 +1,189 @@
+{
+	"cms": {
+		"name": "Typo3CMS",
+		"bundleId": "org.typo3.Typo3CMS",
+		"gitDir": "typo3_cms",
+		"stable": "6.2/.14",
+		"iconName": "typo3cms",
+		"aliases": [
+			"Typo3",
+			"cms",
+			"t3"
+		],
+		"git": "https://git.typo3.org/Packages/TYPO3.CMS.git",
+		"excludePatterns": [
+			"scheduler_cli_dispatch.php",
+			".svn",
+			".git"
+		],
+		"excludePaths": [
+			{
+				"versionRange": "~6.x",
+				"excludes": [
+					"t3lib",
+					"typo3/sysext/core/Migrations/Code/LegacyClassesForIde.php",
+					"typo3/sysext/extbase/Tests",
+					"typo3/sysext/cms",
+					"typo3/sysext/cshmanual",
+					"typo3/sysext/core/Tests",
+					"typo3/sysext/form/Tests",
+					"typo3/class.browse_links.php",
+					"typo3/class.db_list.inc",
+					"typo3/class.db_list_extra.inc",
+					"typo3/class.file_list.inc",
+					"typo3/class.filelistfoldertree.php",
+					"typo3/class.show_rechis.inc",
+					"typo3/class.webpagetree.php",
+					"typo3/show_item.php",
+					"typo3/move_el.php",
+					"typo3/wizard_tsconfig.php",
+					"typo3/db_new.php",
+					"typo3/sysext/rtehtmlarea/class.tx_rtehtmlareaapi.php"
+				]
+			},
+			{
+				"versionRange": "x",
+				"excludes": [
+					"typo3/contrib",
+					"typo3/sysext/openid",
+					"typo3/sysext/adodb"
+				]
+			}
+		],
+		"versions": [
+			{
+				"dashVersion": "master/2015-07-05",
+				"version": "master",
+				"ref": "master",
+				"update": "true",
+				"enabled": "true",
+				"searchKey": "t3"
+			},
+			{
+				"dashVersion": "6.2/.14",
+				"version": "6.2.14",
+				"ref": "6.2.14",
+				"update": "true",
+				"enabled": "true",
+				"searchKey": "t3-62"
+			},
+			{
+				"dashVersion": "6.1/.12",
+				"version": "6.1.12",
+				"ref": "TYPO3_6-1-12",
+				"update": "true",
+				"enabled": "true",
+				"searchKey": "t3-61"
+			},
+			{
+				"dashVersion": "6.0/.14",
+				"version": "6.0.14",
+				"ref": "TYPO3_6-0-14",
+				"update": "true",
+				"enabled": "true",
+				"searchKey": "t3-60"
+			},
+			{
+				"dashVersion": "4.7/.20",
+				"version": "4.7.20",
+				"ref": "TYPO3_4-7-20",
+				"update": "true",
+				"enabled": "true",
+				"searchKey": "t3-47"
+			},
+			{
+				"dashVersion": "4.6/.18",
+				"version": "4.6.18",
+				"ref": "TYPO3_4-6-18",
+				"update": "true",
+				"enabled": "true",
+				"searchKey": "t3-46"
+			},
+			{
+				"dashVersion": "4.5/.40",
+				"version": "4.5.40",
+				"ref": "TYPO3_4-5-40",
+				"update": "true",
+				"enabled": "true",
+				"searchKey": "t3-45"
+			}
+		]
+	},
+
+	"flow": {
+		"name": "Typo3FLOW",
+		"bundleId": "org.typo3.Typo3FLOW",
+		"gitDir": "typo3_flow",
+		"stable": "2.3/.6",
+		"iconName": "typo3flow",
+		"aliases": [
+			"Typo3",
+			"flow"
+		],
+		"git": "https://git.typo3.org/Packages/TYPO3.Flow.git",
+		"excludePatterns": [
+			"scheduler_cli_dispatch.php",
+			".svn",
+			".git"
+		],
+		"excludePaths": [],
+		"versions": [
+			{
+				"dashVersion": "master/2015-07-04",
+				"version": "master",
+				"ref": "master",
+				"update": "true",
+				"enabled": "true",
+				"searchKey": "t3f"
+			},
+			{
+				"dashVersion": "2.3/.6",
+				"version": "2.3.6",
+				"ref": "2.3.6",
+				"update": "true",
+				"enabled": "true",
+				"searchKey": "t3f-23"
+			},
+			{
+				"dashVersion": "2.2/.7",
+				"version": "2.2.7",
+				"ref": "2.2.7",
+				"update": "true",
+				"enabled": "true",
+				"searchKey": "t3f-22"
+			},
+			{
+				"dashVersion": "2.1/.5",
+				"version": "2.1.5",
+				"ref": "2.1.5",
+				"update": "true",
+				"enabled": "true",
+				"searchKey": "t3f-21"
+			},
+			{
+				"dashVersion": "2.0/.2",
+				"version": "2.0.2",
+				"ref": "2.0.2",
+				"update": "true",
+				"enabled": "true",
+				"searchKey": "t3f-20"
+			},
+			{
+				"dashVersion": "1.1/.1",
+				"version": "1.1.1",
+				"ref": "FLOW3-1.1.1",
+				"update": "true",
+				"enabled": "true",
+				"searchKey": "t3f-11"
+			},
+			{
+				"dashVersion": "1.0/.6",
+				"version": "1.0.6",
+				"ref": "FLOW3-1.0.6",
+				"update": "true",
+				"enabled": "true",
+				"searchKey": "t3f-10"
+			}
+		]
+	}
+}
